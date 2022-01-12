@@ -1,7 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
 
 const SideBare = () => {
+  /**
+   *Jquery Function To Set the Active Attribut on The Active class
+   */
+  $(document).ready(function () {
+    $('a').click(function (e) {
+      $('a').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+
   return (
     <div
       className='NavBare d-flex flex-column flex-shrink-0 bg-light'
@@ -21,7 +32,7 @@ const SideBare = () => {
         <li className='nav-item'>
           <Link
             to='/'
-            className='nav-link py-3 border-bottom'
+            className='nav-link py-3 border-bottom active'
             aria-current='page'
             title='Home'
             data-bs-toggle='tooltip'
@@ -31,7 +42,7 @@ const SideBare = () => {
             <i class='fas fa-home'></i>
           </Link>
         </li>
-        <li>
+        <li className='nav-item'>
           <Link
             to='/analysis'
             className='nav-link py-3 border-bottom'
@@ -42,7 +53,7 @@ const SideBare = () => {
             <i class='fas fa-tachometer-alt'></i>
           </Link>
         </li>
-        <li>
+        <li className='nav-item'>
           <Link
             to='summary'
             className='nav-link py-3 border-bottom'
@@ -53,7 +64,7 @@ const SideBare = () => {
             <i class='fas fa-th-list'></i>
           </Link>
         </li>
-        <li>
+        <li className='nav-item'>
           <Link
             to='statistics'
             className='nav-link py-3 border-bottom'
