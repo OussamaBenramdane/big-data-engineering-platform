@@ -1,0 +1,16 @@
+.NavBare {
+  height: 100%;
+  position: absolute;
+  margin-right: 10px;
+  display: flex;
+}
+.nav {
+  margin-top: auto;
+}
+
+.NavBare a {
+  font-size: 33px;
+}
+.NavBare a:focus {
+  background-color: red;
+}
