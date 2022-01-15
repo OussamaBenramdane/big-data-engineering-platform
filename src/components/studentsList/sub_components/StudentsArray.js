@@ -1,10 +1,9 @@
 import React from 'react';
-import Spinner from '../../util/Spinner';
 
 const StudentArray = ({ studentsData }) => {
   return (
     <div className='container-fluid '>
-      <table class='table table-dark table-hover'>
+      <table className='table table-dark table-hover'>
         <thead>
           <tr>
             <th scope='col'>Student Name</th>
@@ -16,27 +15,37 @@ const StudentArray = ({ studentsData }) => {
             <th scope='col'>Scolarship</th>
           </tr>
         </thead>
-        {studentsData ? (
-          <tbody>
-            {studentsData &&
-              studentsData.map((student) => (
-                <tr>
-                  <th>{student.studentname}</th>
-                  <th>{student.Campus}</th>
-                  <th>{student.mailaddress}</th>
-                  <th>{student.phonenumber}</th>
-                  <th>{student.regionOfOrigin}</th>
-                  <th>{student.institutionoforigin}</th>
-                  <th>
-                    <button className='btn btn-info'>Grades</button>
-                  </th>
-                </tr>
-              ))}
-          </tbody>
-        ) : (
-          <Spinner />
-        )}
+
+        <tbody>
+          {studentsData.map((student, key) => (
+            <tr key={key}>
+              <th>{student.studentname}</th>
+              <th>{student.Campus}</th>
+              <th>{student.mailaddress}</th>
+              <th>{student.phonenumber}</th>
+              <th>{student.regionOfOrigin}</th>
+              <th>{student.institutionoforigin}</th>
+              <th>
+                <button className='btn btn-info'>Grades</button>
+              </th>
+            </tr>
+          ))}
+        </tbody>
       </table>
+      <nav aria-label='Page navigation example'>
+        <ul className='pagination'>
+          <li className='page-item'>
+            <a className='page-link' href='#'>
+              Previous
+            </a>
+          </li>
+          <li className='page-item'>
+            <a className='page-link' href='#'>
+              Next
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };
