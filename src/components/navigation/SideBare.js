@@ -25,7 +25,7 @@ const SideBare = () => {
         data-bs-toggle='tooltip'
         data-bs-placement='right'
       >
-        <i class='fas fa-digital-tachograph'></i>
+        <i className='fas fa-digital-tachograph'></i>
         <span className='visually-hidden'>Icon-only</span>
       </Link>
       <ul className='nav nav-pills nav-flush flex-column mb-auto text-center'>
@@ -39,7 +39,7 @@ const SideBare = () => {
             data-bs-placement='right'
             onClick={(e) => console.log(e)}
           >
-            <i class='fas fa-home'></i>
+            <i className='fas fa-home'></i>
           </Link>
         </li>
         <li className='nav-item'>
@@ -50,7 +50,7 @@ const SideBare = () => {
             data-bs-toggle='tooltip'
             data-bs-placement='right'
           >
-            <i class='fas fa-tachometer-alt'></i>
+            <i className='fas fa-tachometer-alt'></i>
           </Link>
         </li>
         <li className='nav-item'>
@@ -61,7 +61,7 @@ const SideBare = () => {
             data-bs-toggle='tooltip'
             data-bs-placement='right'
           >
-            <i class='fas fa-th-list'></i>
+            <i className='fas fa-th-list'></i>
           </Link>
         </li>
         <li className='nav-item'>
@@ -72,7 +72,7 @@ const SideBare = () => {
             data-bs-toggle='tooltip'
             data-bs-placement='right'
           >
-            <i class='far fa-calendar-alt'></i>
+            <i className='far fa-calendar-alt'></i>
           </Link>
         </li>
       </ul>
