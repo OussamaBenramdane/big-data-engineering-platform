@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SideBare from './components/navigation/SideBare';
 import StudentList from './components/studentsList/StudentsList';
-import Summary from './components/landingPages/Summary';
+import Summary from './components/symmary/Summary';
 import Analysis from './components/landingPages/Analysis';
 import Statistics from './components/landingPages/Statistics';
 

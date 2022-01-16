@@ -16,13 +16,7 @@ import {
 export const getStudents = async () => {
   let students = [];
 
-  const q = query(
-    collection(db, 'users'),
-    //region !== 'Region' && where('regionOfOrigin', '==', `${region}`),
-    //institution !== 'Institution' &&where('institutionoforigin', '==', `${institution}`),
-    //studentName !== 'Campuse' && where('studentname', '==', `${institution}`),
-    limit(12)
-  );
+  const q = query(collection(db, 'users'), limit(12));
 
   const querySnapshot = await getDocs(q);
 
@@ -31,4 +25,22 @@ export const getStudents = async () => {
   });
 
   return students;
+};
+
+/**
+ * Get Students by campus
+ */
+
+export const getStudentsByCampus = async () => {
+  let studetnsByCampus = [];
+
+  const q = query(collection(db, 'users'), orderBy('Campus'));
+
+  const querySnapshot = await getDocs(q);
+
+  querySnapshot.forEach((doc) => {
+    studetnsByCampus.push(doc.data());
+  });
+
+  return studetnsByCampus;
 };
