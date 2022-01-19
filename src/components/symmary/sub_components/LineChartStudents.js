@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import the core library.
 import ReactEChartsCore from 'echarts-for-react/lib/core';
 // Import the echarts core module, which provides the necessary interfaces for using echarts.
@@ -15,31 +15,97 @@ import {
 } from 'echarts/renderers';
 
 const LineChartStudents = ({ campusOrderdStudents }) => {
-  const getStudentCountPerYear = () => {
+  const [studentsData, setStudentsData] = useState({});
+
+  useEffect(() => {
     if (campusOrderdStudents) {
-      for (const student in campusOrderdStudents) {
-        //console.log(campusOrderdStudents[student].scolarship);
-        for (let studyYear in campusOrderdStudents[student].scolarship) {
-          console.log(studyYear);
-        }
+      getStudentCountPerYear();
+    }
+  }, []);
+
+  const getStudentCountPerYear = () => {
+    let dates = [];
+    const count = {};
+
+    let obj = {
+      years: [],
+      students: [],
+    };
+    let years = [];
+    let studentsCount = [];
+
+    for (const student in campusOrderdStudents) {
+      Object.entries(campusOrderdStudents[student].scolarship).map((item) => {
+        dates.push(item[1].year);
+        return dates;
+      });
+    }
+    console.log(dates);
+
+    for (const element of dates) {
+      if (count[element]) {
+        count[element] += 1;
+      } else {
+        count[element] = 1;
       }
     }
+    console.log(count);
+
+    for (let obj in count) {
+      years.push(obj);
+      studentsCount.push(studentsCount[obj]);
+    }
+
+    console.log(obj);
+
+    obj.years = years;
+    obj.students = studentsCount;
+    return setStudentsData(obj);
   };
 
-  console.log(getStudentCountPerYear());
-  console.log(campusOrderdStudents);
+  // const countOccurrences = () => {
+  //   const count = {};
+
+  //   for (const element of yearsCount) {
+  //     if (count[element]) {
+  //       count[element] += 1;
+  //     } else {
+  //       count[element] = 1;
+  //     }
+  //   }
+  //   return setOccurrences(count);
+  // };
+
+  // const devideData = () => {
+  //   let obj = {
+  //     years: [],
+  //     students: [],
+  //   };
+  //   let years = [];
+  //   let count = [];
+  //   for (let obj in occurrences) {
+  //     years.push(obj);
+  //     count.push(occurrences[obj]);
+  //   }
+
+  //   obj.years = years;
+  //   obj.students = count;
+
+  //   return setStudentsData(obj);
+  // };
+  console.log(studentsData);
 
   const option = {
     xAxis: {
       type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      data: studentsData && studentsData.years,
     },
     yAxis: {
       type: 'value',
     },
     series: [
       {
-        data: [150, 230, 224, 218, 135, 147, 260],
+        data: studentsData && studentsData.students,
         type: 'line',
       },
     ],

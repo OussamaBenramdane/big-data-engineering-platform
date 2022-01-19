@@ -13,6 +13,8 @@ const StudentsList = () => {
   const [regionValue, setRegionValue] = useState('Region');
   const [institutionValue, setInstitutionValue] = useState('Institution');
 
+  console.log(students);
+
   useEffect(() => {
     if (getStudents) {
       getStudents().then((data) => setStudents(data));

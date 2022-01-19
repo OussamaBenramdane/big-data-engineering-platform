@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# 5DATA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 5DATA : Data Engineering – Project
 
-## Available Scripts
+A web interface for data analysis (Firebase, React js, Ecahrts)
 
-In the project directory, you can run:
+## Developed With
 
-### `npm start`
+- [Visual Studio Code](https://code.visualstudio.com/) - A source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring
+- [Node.js](https://nodejs.org/en/) - Javascript runtime
+- [React](https://reactjs.org/) - A javascript library for building user interfaces
+- [Babel](https://babeljs.io/) - A transpiler for javascript
+- [Webpack](https://webpack.js.org/) - A module bundler
+- [SCSS](http://sass-lang.com/) - A css metalanguage
+- [Bootstrap 4](https://getbootstrap.com/) - Bootstrap is an open source toolkit for developing with HTML, CSS, and JS
+- [Firebase](https://firebase.google.com/) - Fire base for the serverless structure
+- [Echarts](https://echarts.apache.org/en/index.html) - Echart fro charts ploting
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
-  
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The following software is required to be installed on your system:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node 8.x
+- Npm 3.x
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Type the following commands in the terminal to verify your node and npm versions
 
-### `npm run eject`
+```bash
+node -v
+npm -v
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Follow the following steps to get development environment running.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Clone _'Big Data Engineering Platform'_ repository from GitHub
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ```bash
+  git clone https://github.com/OussamaBenramdane/big-data-engineering-platform
+  ```
 
-## Learn More
+  _OR USING SSH_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ```bash
+  git clone https://github.com/OussamaBenramdane/big-data-engineering-platform
+  ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Install node modules
 
-### Code Splitting
+  ```bash
+  npm install
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Starting the frontnd server
 
-### Analyzing the Bundle Size
+- Build application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  This command will start the mongodb and the front end part.
 
-### Making a Progressive Web App
+  ```bash
+  npm start
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  Or Just
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
