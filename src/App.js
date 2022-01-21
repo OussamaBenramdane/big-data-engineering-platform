@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SideBare from './components/navigation/SideBare';
 import StudentList from './components/studentsList/StudentsList';
 import Summary from './components/symmary/Summary';
-import Analysis from './components/landingPages/Analysis';
-import Statistics from './components/landingPages/Statistics';
+import Statistics from './components/statisctics/Statistics';
 
 function App() {
   return (
@@ -16,13 +15,11 @@ function App() {
           </div>
           <div className='col-md-11'>
             <Routes>
-              <Route path='/' element={<StudentList />} />
+              <Route path='/' element={<Summary />} />
+
+              <Route path='/students' element={<StudentList />} />
 
               <Route path='/statistics' element={<Statistics />} />
-
-              <Route path='/summary' element={<Summary />} />
-
-              <Route path='/analysis' element={<Analysis />} />
             </Routes>
           </div>
         </div>

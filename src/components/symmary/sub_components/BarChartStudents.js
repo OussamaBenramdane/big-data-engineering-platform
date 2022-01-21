@@ -132,7 +132,7 @@ const BarChartStudents = ({ campusOrderdStudents }) => {
   return (
     <div className='container'>
       <div className='row'>
-        <h1>Students per campuse</h1>
+        <h1>Students grades range</h1>
       </div>
       <div className='row'>
         <ReactEChartsCore

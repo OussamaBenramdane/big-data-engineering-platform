@@ -44,18 +44,7 @@ const SideBare = () => {
         </li>
         <li className='nav-item'>
           <Link
-            to='/analysis'
-            className='nav-link py-3 border-bottom'
-            title='Dashboard'
-            data-bs-toggle='tooltip'
-            data-bs-placement='right'
-          >
-            <i className='fas fa-tachometer-alt'></i>
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link
-            to='summary'
+            to='students'
             className='nav-link py-3 border-bottom'
             title='Orders'
             data-bs-toggle='tooltip'
