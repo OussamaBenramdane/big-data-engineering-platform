@@ -21,7 +21,7 @@ const LineChartStudents = ({ campusOrderdStudents }) => {
     if (campusOrderdStudents) {
       getStudentCountPerYear();
     }
-  }, []);
+  }, [campusOrderdStudents]);
 
   const getStudentCountPerYear = () => {
     let dates = [];
@@ -31,6 +31,7 @@ const LineChartStudents = ({ campusOrderdStudents }) => {
       years: [],
       students: [],
     };
+
     let years = [];
     let studentsCount = [];
 
@@ -53,59 +54,29 @@ const LineChartStudents = ({ campusOrderdStudents }) => {
 
     for (let obj in count) {
       years.push(obj);
-      studentsCount.push(studentsCount[obj]);
+      studentsCount.push(count[obj]);
     }
 
     console.log(obj);
 
-    obj.years = years;
-    obj.students = studentsCount;
+    obj.years = years.reverse();
+    obj.students = studentsCount.reverse();
     return setStudentsData(obj);
   };
 
-  // const countOccurrences = () => {
-  //   const count = {};
-
-  //   for (const element of yearsCount) {
-  //     if (count[element]) {
-  //       count[element] += 1;
-  //     } else {
-  //       count[element] = 1;
-  //     }
-  //   }
-  //   return setOccurrences(count);
-  // };
-
-  // const devideData = () => {
-  //   let obj = {
-  //     years: [],
-  //     students: [],
-  //   };
-  //   let years = [];
-  //   let count = [];
-  //   for (let obj in occurrences) {
-  //     years.push(obj);
-  //     count.push(occurrences[obj]);
-  //   }
-
-  //   obj.years = years;
-  //   obj.students = count;
-
-  //   return setStudentsData(obj);
-  // };
   console.log(studentsData);
 
   const option = {
     xAxis: {
       type: 'category',
-      data: studentsData && studentsData.years,
+      data: studentsData && studentsData?.years,
     },
     yAxis: {
       type: 'value',
     },
     series: [
       {
-        data: studentsData && studentsData.students,
+        data: studentsData && studentsData?.students,
         type: 'line',
       },
     ],
@@ -125,13 +96,12 @@ const LineChartStudents = ({ campusOrderdStudents }) => {
       <div className='row'>
         <h1>Students Over the years</h1>
       </div>
-      <div className='row mt-4 pt-1'>
+      <div className='row'>
         <ReactEChartsCore
           echarts={echarts}
           option={option}
           notMerge={true}
           lazyUpdate={true}
-          theme={'dark'}
           style={{
             height: '40vh',
             top: 30,

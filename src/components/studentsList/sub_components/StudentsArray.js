@@ -12,7 +12,6 @@ const StudentArray = ({ studentsData }) => {
             <th scope='col'>Fhone number</th>
             <th scope='col'>Reajon of origin</th>
             <th scope='col'>Origin institution</th>
-            <th scope='col'>Scolarship</th>
           </tr>
         </thead>
 
@@ -25,9 +24,6 @@ const StudentArray = ({ studentsData }) => {
               <th>{student.phonenumber}</th>
               <th>{student.regionOfOrigin}</th>
               <th>{student.institutionoforigin}</th>
-              <th>
-                <button className='btn btn-info'>Grades</button>
-              </th>
             </tr>
           ))}
         </tbody>

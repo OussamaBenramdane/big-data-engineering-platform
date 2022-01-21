@@ -16,7 +16,7 @@ import {
 export const getStudents = async () => {
   let students = [];
 
-  const q = query(collection(db, 'users'), limit(12));
+  const q = query(collection(db, 'users'), limit(17));
 
   const querySnapshot = await getDocs(q);
 

@@ -98,8 +98,8 @@ const StudentsList = () => {
   };
 
   return (
-    <div className='container-fluid'>
-      <div className='row'>
+    <div className='customCard container-fluid'>
+      <div className=' row'>
         <div className='col'>
           <h1>Students List</h1>
         </div>

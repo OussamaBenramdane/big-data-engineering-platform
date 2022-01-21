@@ -72,7 +72,7 @@ const PieChartStats = ({ campusOrderdStudents }) => {
   echarts.use([TooltipComponent, PieChart, CanvasRenderer, LegendComponent]);
 
   return (
-    <div className='container-fluid'>
+    <div className='container'>
       <div className='row'>
         <h1>Students per campuse</h1>
       </div>
@@ -82,11 +82,9 @@ const PieChartStats = ({ campusOrderdStudents }) => {
           option={option}
           notMerge={true}
           lazyUpdate={true}
-          theme={'dark'}
           style={{
-            height: '40vh',
+            height: '35vh',
             top: 30,
-            width: '90vw',
             borderRadius: '30%',
           }}
         />

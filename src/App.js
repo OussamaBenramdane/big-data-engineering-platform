@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className='App wrapper'>
-        <div className='row'>
+        <div className='row me-0 p-0'>
           <div className='Navigation-col col-md-1'>
             <SideBare />
           </div>
